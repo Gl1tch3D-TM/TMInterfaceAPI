@@ -24,6 +24,7 @@ class MainClient(Client):
         if _time >= self.time_from:
             if self.is_air(iface):
                 self.TotalAir += 10
+                print(self.TotalAir)
             elif not self.is_air(iface) and _time == self.time_to:
                 print(f"Total Airtime: {self.TotalAir}")
                 self.TotalAir = 0
